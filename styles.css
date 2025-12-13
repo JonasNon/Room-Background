@@ -1,0 +1,125 @@
+:root {
+  --bg: #107500;
+  --border: #0d6300;
+  --fill: #004969;
+}
+
+
+#main {
+    background: #0D5708;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.grid {
+  display: grid;
+
+  /* 7 equal columns */
+  grid-template-columns: repeat(7, 1fr);
+
+  /* row heights: top → bottom */
+    grid-template-rows:
+    12vh   /* top */
+    55vh  /* middle-top */
+    40vh;  /* middle-bottom */
+     /* bottom */
+  gap: 8px;
+  width: 102vw;
+  position: absolute;
+  left: -1vw;
+  top: -1vh;
+}
+
+
+.top {
+  grid-row: 1;
+  grid-column: 1 / span 7; /* 2 wide */
+}
+
+.calander {
+  grid-row: 2;
+  grid-column: 1 / -1; /* 7 wide */
+}
+
+.bottom-left {
+  grid-row: 3;
+  grid-column: 1 / span 3;
+}
+
+.bottom-right {
+  grid-row: 3;
+  grid-column: 5 / span 3; /* 4 wide */
+}
+
+/* 
+grid section designs
+*/
+
+.cell {
+  background: var(--fill);
+  border: 6px solid var(--border); /* thick border */
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.hero {
+  border-width: 10px;
+  border-radius: 16px;
+}
+
+/* 
+design assignment
+*/
+
+.day-box {
+  outline: solid black 5px;
+  padding: 10%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#day1 {
+  grid-row: 2;
+  grid-column: 1;
+  background-color: red;
+}
+
+#day2 {
+  grid-row: 2;
+  grid-column: 2;
+  background-color: orange;
+}
+
+#day3 {
+  grid-row: 2;
+  grid-column: 3;
+  background-color: yellow;
+}
+
+#day4 {
+  grid-row: 2;
+  grid-column: 4;
+  background-color: green;
+}
+
+#day5 {
+  grid-row: 2;
+  grid-column: 5;
+  background-color: blue;
+}
+
+#day6 {
+  grid-row: 2;
+  grid-column: 6;
+  background-color: indigo;
+}
+
+#day7 {
+  grid-row: 2;
+  grid-column: 7;
+  background-color: violet;
+}
+
+
